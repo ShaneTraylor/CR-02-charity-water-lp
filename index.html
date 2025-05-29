@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Charity:Water Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- This script is for the mobile menu toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
-    <!-- Add your HTML here -->
+  <!-- Header section with logo, navigation, and subscribe button -->
+  <header>
+    <div class="logo">
+      <!-- Use the logo image from the img folder -->
+      <img src="img/water-can-transparent.png" alt="Charity:Water Logo">
+      Charity:Water
+    </div>
+    <!-- Hamburger menu for mobile -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Navigation links -->
+    <nav id="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <!-- Subscribe button -->
+    <button class="subscribe-btn">Subscribe</button>
+  </header>
+
+  <!-- Hero section with image and message -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="image-container">
+        <!-- Use the correct image from the img folder -->
+        <img src="img/Children-gathering-water-at-a-tap.jpg" alt="Children gathering water at a tap">
+      </div>
+      <div class="caption">
+        <!-- Caption under the image -->
+        Your support brings more than clean water—it brings hope, health, and a future. This image captures the joy and transformation made possible by people like you. Together, we can empower communities for generations to come and help every child grow up with the most basic human right: access to clean, safe water.
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-text">
+        <!-- Main hero heading and message -->
+        <h1>The World Needs Clean Water—And You</h1>
+        <p>You have the power to turn the tide for millions without safe water.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Story Section -->
+  <section class="impact-story section-light-blue">
+    <!-- Real-world impact story with image and text -->
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 2em 0;">
+      <!-- Impact image -->
+      <img src="https://via.placeholder.com/300x200.png?text=Impact+Story" alt="Impact Story" style="border-radius:8px; margin: 1em; max-width: 300px; width: 100%;">
+      <!-- Impact text -->
+      <div style="max-width: 400px; margin: 1em;">
+        <h2 style="color: #2E9DF7; font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;">Real Impact: Meet Amina</h2>
+        <p>
+          Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier. Your donation truly changes lives!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section class="donation-section" style="background-color: #FFC907; text-align: center; padding: 2em 1em;">
+    <h2 style="color: #2E9DF7; font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;">Help Us Make a Difference</h2>
+    <p style="margin-bottom: 1.5em;">
+      Every dollar brings clean water to someone in need. Join us and be the change!
+    </p>
+    <!-- Bold Donate Now button -->
+    <button style="
+      background-color: #2E9DF7;
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+      ">
+      Donate Now
+    </button>
+  </section>
 </body>
 </html>

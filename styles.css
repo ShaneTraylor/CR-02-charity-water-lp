@@ -17,3 +17,266 @@ Fonts:
 - Avenir
 
 */
+
+/* Use the brand fonts if available, otherwise use Arial or sans-serif */
+body {
+  margin: 0;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  background-color: #f3f2f2; /* Light background */
+  color: #222;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #fff;
+  position: relative;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #FFC907; /* Primary Yellow */
+  font-size: 1.2em;
+}
+
+.logo img {
+  height: 30px;
+  margin-right: 0.5em;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  gap: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2E9DF7; /* Primary Blue */
+  font-weight: bold;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+/* Hamburger menu for mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  background: #222;
+  margin: 4px 0;
+  width: 25px;
+}
+
+/* Subscribe button styles */
+.subscribe-btn {
+  background-color: #FFC907; /* Primary Yellow */
+  color: #2E9DF7; /* Primary Blue */
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+.subscribe-btn:hover {
+  background-color: #FF902A; /* Orange */
+  color: #fff;
+}
+
+/* Hero section styles */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  min-height: 70vh;
+  background-color: #8BD1CB; /* Light Blue */
+}
+
+/* Left side of hero section */
+.hero-left {
+  flex: 1;
+  max-width: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.hero-left .image-container {
+  width: 100%;
+}
+
+.hero-left img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Caption under the image */
+.caption {
+  margin-top: 1em;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1em;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #FF902A; /* Orange */
+  text-align: center;
+}
+
+/* Right side of hero section */
+.hero-right {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #2E9DF7; /* Primary Blue */
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+.hero-text p {
+  color: #4FCB53; /* Green */
+  font-weight: bold;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+/* Impact story section using Light Blue */
+.section-light-blue {
+  background-color: #8BD1CB; /* Light Blue */
+}
+
+/* Example for other sections using brand colors */
+.section-red {
+  background-color: #F5402C; /* Red */
+  color: #fff;
+  padding: 1em;
+}
+
+.section-dark-green {
+  background-color: #159A48; /* Dark Green */
+  color: #fff;
+  padding: 1em;
+}
+
+.section-pink {
+  background-color: #F16061; /* Pink */
+  color: #fff;
+  padding: 1em;
+}
+
+/* Donation section using Primary Yellow and Blue */
+.donation-section {
+  background-color: #FFC907; /* Primary Yellow */
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.donation-section h2 {
+  color: #2E9DF7; /* Primary Blue */
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+.donation-section button {
+  background-color: #2E9DF7; /* Primary Blue */
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+}
+
+.donation-section button:hover {
+  background-color: #FF902A; /* Orange */
+}
+
+/* Media queries help make the website look good on both desktop and mobile devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-left, .hero-right {
+    max-width: 100%;
+    flex: 100%;
+    padding: 1em;
+  }
+
+  .impact-story > div {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 1em 0 !important;
+  }
+
+  .impact-story img {
+    margin: 0.5em 0 !important;
+    max-width: 90vw !important;
+  }
+
+  .impact-story div[style*="max-width: 400px"] {
+    max-width: 95vw !important;
+    margin: 0.5em 0 !important;
+  }
+
+  .donation-section {
+    padding: 1em 0.5em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.2em;
+  }
+  .donation-section h2 {
+    font-size: 1.1em;
+  }
+  .donation-section button {
+    font-size: 1em !important;
+    padding: 0.6em 1em !important;
+  }
+}
