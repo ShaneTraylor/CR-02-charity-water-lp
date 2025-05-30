@@ -22,7 +22,7 @@ Fonts:
 body {
   margin: 0;
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
-  background-color: #f3f2f2; /* Light background */
+  background-color: #8BD1CB; /* Light Blue for a calm, hopeful background */
   color: #222;
 }
 
@@ -32,8 +32,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  background-color: #fff;
+  /* Use a blue banner for the header for a strong, hopeful look */
+  background-color: #2E9DF7; /* Primary Blue banner head */
   position: relative;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.08); /* Soft shadow for depth */
 }
 
 /* Logo styles */
@@ -41,7 +43,7 @@ header {
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: #FFC907; /* Primary Yellow */
+  color: #FFC907; /* Yellow for logo text for contrast on blue */
   font-size: 1.2em;
 }
 
@@ -58,39 +60,99 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #2E9DF7; /* Primary Blue */
+  color: #FFC907; /* Yellow for navigation links */
   font-weight: bold;
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
 }
 
-/* Hamburger menu for mobile */
+nav a:hover {
+  color: #2E9DF7; /* Blue on hover for a gentle accent */
+}
+
+/* Hide navigation links on small screens by default */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5em;
+    background-color: #2E9DF7; /* Match header color for mobile nav */
+    padding: 1em 0;
+  }
+  nav.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Add spacing between logo, hamburger, and donate button in mobile */
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em; /* Adds space between header items */
+  }
+
+  .logo {
+    margin-bottom: 0.5em; /* Extra space below logo */
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    align-self: center; /* Center the hamburger icon horizontally */
+    margin-bottom: 0.5em;
+  }
+
+  .subscribe-btn {
+    align-self: center; /* Center the donate button */
+    margin-bottom: 0.5em;
+  }
+}
+
+/* Hamburger menu for mobile - hidden on large screens */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-left: 1em;
 }
 
 .menu-toggle span {
   height: 3px;
-  background: #222;
+  background: #FFC907; /* Yellow for hamburger lines */
   margin: 4px 0;
   width: 25px;
+  border-radius: 2px;
 }
 
-/* Subscribe button styles */
+/* Show navigation bar and hide hamburger on larger screens */
+@media (min-width: 769px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* Donate Now button styles */
 .subscribe-btn {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #2E9DF7; /* Primary Blue */
+  background-color: #FFC907; /* Yellow for action */
+  color: #222; /* Dark text for contrast */
   border: none;
   padding: 0.5em 1em;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  transition: background 0.2s;
 }
 
 .subscribe-btn:hover {
-  background-color: #FF902A; /* Orange */
+  background-color: #FF902A; /* Orange for a warm hover */
   color: #fff;
 }
 
@@ -100,14 +162,15 @@ nav a {
   flex-wrap: wrap;
   padding: 0;
   min-height: 70vh;
-  background-color: #8BD1CB; /* Light Blue */
+  background-color: #8BD1CB; /* Light Blue for a soft, hopeful background */
 }
 
 /* Left side of hero section */
 .hero-left {
   flex: 1;
   max-width: 50%;
-  background-color: #fff;
+  /* The line below sets the left side of the hero section to white, covering the body background */
+  /* background-color: #fff; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,16 +186,17 @@ nav a {
   width: 100%;
   border-radius: 8px;
   display: block;
+  border: 3px solid #2E9DF7; /* Blue border for subtle focus */
 }
 
 /* Caption under the image */
 .caption {
   margin-top: 1em;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 1em;
   border-radius: 8px;
   font-size: 0.95em;
-  color: #FF902A; /* Orange */
+  color: #159A48; /* Use dark green for a calm, positive accent */
   text-align: center;
 }
 
@@ -151,56 +215,61 @@ nav a {
 }
 
 .hero-text h1 {
-  font-size: 2em;
+  font-size: 2.5em; /* Make the main headline bigger */
   margin-bottom: 0.5em;
-  color: #2E9DF7; /* Primary Blue */
+  color: #2E9DF7; /* Blue for main heading */
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
 }
 
 .hero-text p {
-  color: #4FCB53; /* Green */
+  color: #4FCB53; /* Green for positive change */
   font-weight: bold;
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  font-size: 1.5em; /* Make the subheadline bigger */
 }
 
 /* Impact story section using Light Blue */
 .section-light-blue {
-  background-color: #8BD1CB; /* Light Blue */
+  background-color: #fff; /* White for a clean, non-clashing background */
 }
 
 /* Example for other sections using brand colors */
 .section-red {
-  background-color: #F5402C; /* Red */
+  background-color: #F5402C; /* Red for urgency */
   color: #fff;
   padding: 1em;
 }
 
 .section-dark-green {
-  background-color: #159A48; /* Dark Green */
+  background-color: #159A48; /* Dark Green for growth */
   color: #fff;
   padding: 1em;
 }
 
 .section-pink {
-  background-color: #F16061; /* Pink */
+  background-color: #F16061; /* Pink for compassion */
   color: #fff;
   padding: 1em;
 }
 
 /* Donation section using Primary Yellow and Blue */
 .donation-section {
-  background-color: #FFC907; /* Primary Yellow */
+  background-color: #FFC907; /* Yellow for hope and action */
   text-align: center;
   padding: 2em 1em;
 }
 
 .donation-section h2 {
-  color: #2E9DF7; /* Primary Blue */
+  color: #2E9DF7; /* Blue for trust */
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
 }
 
+.donation-section p {
+  color: #222;
+}
+
 .donation-section button {
-  background-color: #2E9DF7; /* Primary Blue */
+  background-color: #2E9DF7; /* Blue for trust */
   color: #fff;
   font-size: 1.2em;
   font-weight: bold;
@@ -209,17 +278,19 @@ nav a {
   border-radius: 6px;
   cursor: pointer;
   font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
+  transition: background 0.2s;
 }
 
 .donation-section button:hover {
-  background-color: #FF902A; /* Orange */
+  background-color: #4FCB53; /* Green for positive action */
 }
 
 /* Media queries help make the website look good on both desktop and mobile devices */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 1em; /* Adds space between header items */
   }
 
   nav {
@@ -227,6 +298,8 @@ nav a {
     flex-direction: column;
     width: 100%;
     margin-top: 0.5em;
+    background-color: #2E9DF7; /* Match header color for mobile nav */
+    padding: 1em 0;
   }
 
   nav.show {
@@ -237,14 +310,44 @@ nav a {
     display: flex;
   }
 
+  /* Add spacing between logo, hamburger, and donate button in mobile */
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em; /* Adds space between header items */
+  }
+
+  .logo {
+    margin-bottom: 0.5em; /* Extra space below logo */
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    align-self: center; /* Center the hamburger icon horizontally */
+    margin-bottom: 0.5em;
+  }
+
+  .subscribe-btn {
+    align-self: center; /* Center the donate button */
+    margin-bottom: 0.5em;
+  }
+
   .hero {
     flex-direction: column;
   }
 
-  .hero-left, .hero-right {
+  /* Move the hero text above the image on mobile */
+  .hero-right {
+    order: -1; /* Show hero-right (headline/subheadline) first */
+    max-width: 100%;
+    padding: 1em;
+  }
+
+  .hero-left {
     max-width: 100%;
     flex: 100%;
     padding: 1em;
+    order: 0; /* Show hero-left (image/caption) after hero-right */
   }
 
   .impact-story > div {
@@ -266,17 +369,21 @@ nav a {
   .donation-section {
     padding: 1em 0.5em !important;
   }
+
+  .hero-text h1 {
+    font-size: 2em; /* Main headline stays large on mobile */
+  }
+
+  .hero-text p {
+    font-size: 1.2em; /* Subheadline is smaller than headline on mobile */
+  }
 }
 
 @media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Still larger than subheadline on very small screens */
   }
-  .donation-section h2 {
-    font-size: 1.1em;
-  }
-  .donation-section button {
-    font-size: 1em !important;
-    padding: 0.6em 1em !important;
+  .hero-text p {
+    font-size: 1em;
   }
 }

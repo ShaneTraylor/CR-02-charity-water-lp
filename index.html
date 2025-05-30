@@ -3,97 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Charity:Water Landing Page</title>
+  <!-- Link to the external CSS file for styling -->
   <link rel="stylesheet" href="styles.css">
-  <!-- This script is for the mobile menu toggle -->
+  <!-- Script for toggling the navigation menu on mobile devices -->
   <script>
     function toggleMenu() {
+      // This function adds or removes the 'show' class to the nav element
+      // When the class is present, the navigation links are shown on small screens
       const nav = document.getElementById('nav');
       nav.classList.toggle('show');
     }
   </script>
 </head>
 <body>
-  <!-- Header section with logo, navigation, and subscribe button -->
+  <!-- Header section: contains the logo, navigation links, and donate button -->
   <header>
     <div class="logo">
-      <!-- Use the logo image from the img folder -->
+      <!-- Logo image and brand name. The image is in the img folder. -->
       <img src="img/water-can-transparent.png" alt="Charity:Water Logo">
       Charity:Water
     </div>
-    <!-- Hamburger menu for mobile -->
+    <!-- Hamburger menu icon for mobile navigation -->
     <div class="menu-toggle" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
-    <!-- Navigation links -->
+    <!-- Navigation links. These are shown or hidden on mobile using the menu toggle. -->
     <nav id="nav">
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Projects</a>
       <a href="#">Contact</a>
     </nav>
-    <!-- Subscribe button -->
-    <button class="subscribe-btn">Subscribe</button>
+    <!-- Donate Now button encourages users to take action -->
+    <button class="subscribe-btn">Donate Now</button>
   </header>
 
-  <!-- Hero section with image and message -->
+  <!-- Hero section: main visual and message of the landing page -->
   <section class="hero">
     <div class="hero-left">
       <div class="image-container">
-        <!-- Use the correct image from the img folder -->
+        <!-- Main hero image showing children gathering water -->
         <img src="img/Children-gathering-water-at-a-tap.jpg" alt="Children gathering water at a tap">
       </div>
       <div class="caption">
-        <!-- Caption under the image -->
+        <!-- Caption explains the impact of support and the importance of clean water -->
         Your support brings more than clean water—it brings hope, health, and a future. This image captures the joy and transformation made possible by people like you. Together, we can empower communities for generations to come and help every child grow up with the most basic human right: access to clean, safe water.
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-text">
-        <!-- Main hero heading and message -->
+        <!-- Main headline and subheadline for the hero section -->
         <h1>The World Needs Clean Water—And You</h1>
         <p>You have the power to turn the tide for millions without safe water.</p>
       </div>
     </div>
   </section>
 
-  <!-- Impact Story Section -->
+  <!-- Impact story section: shares a real-world example of the charity's work -->
   <section class="impact-story section-light-blue">
-    <!-- Real-world impact story with image and text -->
     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 2em 0;">
-      <!-- Impact image -->
-      <img src="https://via.placeholder.com/300x200.png?text=Impact+Story" alt="Impact Story" style="border-radius:8px; margin: 1em; max-width: 300px; width: 100%;">
-      <!-- Impact text -->
-      <div style="max-width: 400px; margin: 1em;">
-        <h2 style="color: #2E9DF7; font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;">Real Impact: Meet Amina</h2>
-        <p>
-          Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier. Your donation truly changes lives!
-        </p>
+      <!-- Impact story image (now using the provided image from the img folder) -->
+      <img src="img/5744_Ethiopia_2019_CG-.jpg" alt="Impact Story" style="border-radius:8px; margin: 1em; max-width: 300px; width: 100%;">
+      <div style="max-width: 600px; margin: 1em; text-align: center;">
+        <h2>Impact Story: A Village Transformed</h2>
+        <p>In a remote village, access to clean water was a distant dream. With your support, we installed a new well that now serves over many families. Children no longer walk miles for water, and the community is thriving with better health and education.</p>
+        <p>Join us in making more stories like this possible.</p>
+        <button class="subscribe-btn">Donate Now</button>
       </div>
     </div>
-  </section>
-
-  <!-- Donation Section -->
-  <section class="donation-section" style="background-color: #FFC907; text-align: center; padding: 2em 1em;">
-    <h2 style="color: #2E9DF7; font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;">Help Us Make a Difference</h2>
-    <p style="margin-bottom: 1.5em;">
-      Every dollar brings clean water to someone in need. Join us and be the change!
-    </p>
-    <!-- Bold Donate Now button -->
-    <button style="
-      background-color: #2E9DF7;
-      color: #fff;
-      font-size: 1.2em;
-      font-weight: bold;
-      padding: 0.8em 2em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Proxima Nova', 'Avenir', Arial, sans-serif;
-      ">
-      Donate Now
-    </button>
   </section>
 </body>
 </html>
