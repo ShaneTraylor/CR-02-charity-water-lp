@@ -285,12 +285,38 @@ nav a:hover {
   background-color: #4FCB53; /* Green for positive action */
 }
 
-/* Media queries help make the website look good on both desktop and mobile devices */
+/* Responsive styles for all screen sizes: mobile, tablet, and laptops */
+@media (max-width: 1024px) {
+  /* Slightly reduce padding for tablets and small laptops */
+  header {
+    padding: 1em;
+  }
+  .hero-right, .hero-left {
+    padding: 1em;
+  }
+  .impact-story > div {
+    padding: 1.5em 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+  .hero-text p {
+    font-size: 1.2em;
+  }
+  .impact-story img {
+    max-width: 250px !important;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: stretch;
-    gap: 1em; /* Adds space between header items */
+    gap: 1em;
+    padding: 1em;
   }
 
   nav {
@@ -298,7 +324,7 @@ nav a:hover {
     flex-direction: column;
     width: 100%;
     margin-top: 0.5em;
-    background-color: #2E9DF7; /* Match header color for mobile nav */
+    background-color: #2E9DF7;
     padding: 1em 0;
   }
 
@@ -308,37 +334,27 @@ nav a:hover {
 
   .menu-toggle {
     display: flex;
-  }
-
-  /* Add spacing between logo, hamburger, and donate button in mobile */
-  header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1em; /* Adds space between header items */
-  }
-
-  .logo {
-    margin-bottom: 0.5em; /* Extra space below logo */
-    justify-content: center;
-  }
-
-  .menu-toggle {
-    align-self: center; /* Center the hamburger icon horizontally */
+    align-self: center;
     margin-bottom: 0.5em;
   }
 
+  .logo {
+    margin-bottom: 0.5em;
+    justify-content: center;
+  }
+
   .subscribe-btn {
-    align-self: center; /* Center the donate button */
+    align-self: center;
     margin-bottom: 0.5em;
   }
 
   .hero {
     flex-direction: column;
+    min-height: auto;
   }
 
-  /* Move the hero text above the image on mobile */
   .hero-right {
-    order: -1; /* Show hero-right (headline/subheadline) first */
+    order: -1;
     max-width: 100%;
     padding: 1em;
   }
@@ -347,7 +363,7 @@ nav a:hover {
     max-width: 100%;
     flex: 100%;
     padding: 1em;
-    order: 0; /* Show hero-left (image/caption) after hero-right */
+    order: 0;
   }
 
   .impact-story > div {
@@ -361,7 +377,8 @@ nav a:hover {
     max-width: 90vw !important;
   }
 
-  .impact-story div[style*="max-width: 400px"] {
+  .impact-story div[style*="max-width: 400px"], 
+  .impact-story div[style*="max-width: 600px"] {
     max-width: 95vw !important;
     margin: 0.5em 0 !important;
   }
@@ -371,19 +388,32 @@ nav a:hover {
   }
 
   .hero-text h1 {
-    font-size: 2em; /* Main headline stays large on mobile */
+    font-size: 2em;
   }
 
   .hero-text p {
-    font-size: 1.2em; /* Subheadline is smaller than headline on mobile */
+    font-size: 1.2em;
   }
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 0.5em;
+  }
+  .logo img {
+    height: 24px;
+  }
   .hero-text h1 {
-    font-size: 1.5em; /* Still larger than subheadline on very small screens */
+    font-size: 1.3em;
   }
   .hero-text p {
     font-size: 1em;
+  }
+  .subscribe-btn {
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+  .impact-story img {
+    max-width: 98vw !important;
   }
 }
